@@ -1,0 +1,37 @@
+
+.divPrinc{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 5px;
+  width: 450px;
+}
+.divAddTarefas{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: rgb(213, 230, 245);
+  padding: 10px;
+  border-radius: 5px;
+  align-content: flex-start;
+  width: 90%;
+}
+.spaco{
+  margin : 10px;
+}
+input{
+  padding: 10px;
+  border-radius: 8px;
+  background-color: aliceblue;
+  border:  none;
+  color: rgb(95, 95, 255);
+  font-size: 15px;
+  font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  }
+
+input::placeholder{
+  color: rgb(116, 163, 163);
+  font-size: 17px;
+
+}
