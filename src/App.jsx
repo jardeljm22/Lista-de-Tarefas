@@ -27,15 +27,14 @@ function App() {
         }    
     ]);
 
- const ApagaTarefa = (id) => {
-  const NovaListaAtualizada = lista.filter(t => t.id !== id)
-  setLista(NovaListaAtualizada);
- }
-
+    const ApagaTarefa = (id) => {
+      const NovaListaAtualizada = lista.filter(t => t.id !== id)
+      setLista(NovaListaAtualizada);
+    };
 
   // alterando o valor para mostrar se a tarefa foi concluida ou não
     
-    const alteraCheckLista = (id) =>{
+    const marcaTarefaConcluida = (id) =>{
         const recebeNovaListaAlterada = lista.map(obj =>{
           if(obj.id === id) {
             return {...obj,isCompleted : !obj.isCompleted }
@@ -44,7 +43,7 @@ function App() {
         }
       )
       setLista(recebeNovaListaAlterada)
-    }
+    };
 
     const addNovaTarefa = (titulo,description) => {
       const NovaTarefa = {id : lista.length +1 ,
@@ -52,7 +51,7 @@ function App() {
                           description : description,
                           isCompleted : false}
       setLista([...lista,NovaTarefa]);
-    }
+    };
 
   return (
 
@@ -61,7 +60,7 @@ function App() {
       <AddTarefas novaTarefa ={addNovaTarefa} />
       <Tarefas listatarefas={lista} 
       apagaTarefa={ApagaTarefa} 
-      addCheckLista={alteraCheckLista} />
+      addCheckLista={marcaTarefaConcluida} />
       </div>  
   )
 }
