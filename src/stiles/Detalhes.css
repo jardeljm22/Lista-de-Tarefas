@@ -1,0 +1,22 @@
+.divDetalhes{
+    display: flex;
+    width: 500px;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    background-color: rgb(213, 220, 245);
+    align-content: flex-start;
+    border-radius: 5px;
+
+}
+h2,p{
+    color: rgb(24, 34, 99) ;
+}
+.link{
+    align-content: center;
+}
+.DivHeader{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}

@@ -1,5 +1,5 @@
 
-import '../App.css'
+import '../stiles/App.css'
 import { useState } from 'react';
 
 
@@ -20,10 +20,18 @@ const AddTarefas = (props)  => {
 
             className="spaco" type="text" placeholder="descrição da tarefa" />
             <button className="spaco "onClick={ ()=>{
+                
                 // removendo os espaços com o metodo trim() do titulo e da 
                 // descrição para verificar se há alguma coisa escrita
                 if(title.trim().length  > 0 && description.trim().length > 0){
-                    props.novaTarefa(title,description) 
+                   // adicionando valores ao objeto
+                    let novaTarefa = {
+                    id : Date.now(),
+                    title : title ,
+                    description : description,
+                    isCompleted : false
+                   }
+                    props.novaTarefa(novaTarefa) ;
                     setTitle("");
                     setDescription("");
                 } else{                  
@@ -31,7 +39,7 @@ const AddTarefas = (props)  => {
                 }
             }
         }
-                 >Adicionar Tarefa</button>
+                 >{props.funcaoTarefa}</button>
         </div>
     )
 }
