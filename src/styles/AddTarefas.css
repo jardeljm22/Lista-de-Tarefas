@@ -1,0 +1,97 @@
+
+
+.div-container-addtarefas{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: rgb(213, 230, 245);
+  padding: 10px;
+  border-radius: 5px;
+  align-content: flex-start;
+  width: 90%;
+  z-index: 0;
+}
+.spaco{
+  margin : 10px;
+ 
+
+}
+.div-container-addtarefas button {
+  border-radius: 8px;
+  border: 1px solid transparent;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+  cursor: pointer;
+  transition: border-color 0.25s;
+  background-color: rgb(131, 136, 234);
+  color: azure;
+  padding-bottom: 5px;
+  padding-top : 5px ;
+
+}
+.spaco:hover{
+  transform: scale(1.1);
+  transition:transform 0.4s ease ;
+  box-shadow: 2px 2px 1px 2px black;
+}
+
+.div-alerta{
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  left: auto;
+  right: auto;
+  top: -18px;
+  background-color: rgba(40, 40, 40, 0.7);
+  visibility: hidden;
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.3s ease;
+  z-index: 2;
+
+}
+ .alerta{
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+  transition: all 0.3s ease;
+}
+
+.div-conteudo-alerta{
+  display: flex;
+  justify-content: center;
+  background-color: brown;
+  flex-direction: column;
+  width: 400px;
+  height: 350px;
+  border-radius: 35px;
+  box-shadow: 2px 2px 5px 2px black;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 100px;
+  text-align: center;
+  padding: 10px 15px ;
+ 
+  
+}
+.div-conteudo-alerta button{
+  box-shadow: 2px 2px 2px 2px  black;
+  width: 200px;
+  margin-left: auto;
+  margin-right: auto;
+  transition: all 0.2s ease;
+ }
+.div-conteudo-alerta button:hover {
+  transform: scale(1.1);
+  transition: transform 0.2s ease;
+ }
+
+.fundo-branco{
+  background-color: antiquewhite;
+
+}
+
+.fundo-branco h1{
+  color: blue;
+}

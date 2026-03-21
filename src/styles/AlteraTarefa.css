@@ -1,0 +1,137 @@
+ 
+.div-container-altera-tarefa{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 5px;
+  width: 450px;
+  margin-left: auto;
+  margin-right: auto;
+  filter: blur(15px);
+  opacity: 0;
+  transition: all 0.6s ease 0.3s;
+  background-color: aliceblue;
+  border-radius: 15px;
+  box-shadow: 5px 5px 3px rgba(80, 80, 80, 0.983);
+ }
+ .div-container-altera-tarefa.show{
+    filter: blur(0);
+    opacity: 1;
+    transition: all 0.2s ease;
+ }
+
+.div-container-altera-tarefa button,.div-confirmacao-conteudo button{
+    background-color: rgb(85, 63, 252);
+    color: rgb(231, 231, 231);
+    font-size: 20px;
+    padding: 10px;
+    border-radius: 15px;
+    box-shadow: 0 0 7px rgba(97, 97, 97, 0.983);
+    border: none;
+    cursor: pointer;
+}
+.div-input{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-bottom: 20px;
+    height: 100px;
+    padding: 5px 40px;
+    box-shadow: 0 0 7px rgba(97, 97, 97, 0.983);
+    border-radius: 15px;
+}
+.div-input label{
+    color: black;
+    font-size: 20px;
+    margin-bottom: 10px;
+    text-align: left;
+}
+
+.div-input-descricao{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-bottom: 20px;
+    height: auto;
+    padding: 10px 10px;
+    box-shadow: 0 0 7px rgba(97, 97, 97, 0.983);
+    width: 85%;
+    border-radius: 9px;
+ }
+.div-container-altera-tarefa h1{
+    color: black;
+}
+ .div-input-descricao label{
+    color: black;
+    font-size: 20px;
+    margin-bottom: 10px;
+    text-align: left;
+}
+#title{
+    color: rgb(39, 15, 219);
+    font-size: 20px;
+    margin-bottom: 10px;
+    background-color: rgb(143, 241, 244);
+}
+
+.div-input-descricao textarea{
+    color: rgb(231, 231, 231);
+    font-size: 20px;
+    margin-bottom: 10px;
+    background-color: rgb(40, 40, 40);
+    padding: 10px;
+    max-width: 100%;
+    text-align: left;
+    min-height: 200px;
+    box-sizing: border-box;
+    scrollbar-width: none;
+    resize: none;
+}
+
+.div-confirmacao{
+
+    display: flex;
+    visibility: hidden;
+    background-color: rgba(80, 80, 80, 0.661);
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    transition: all 0.3s ease;
+    opacity: 0;
+    filter: blur(15px);
+    transition:  opacity, filter 0.3s ease;
+    pointer-events: none;
+
+ }
+ .div-confirmacao.show{
+    visibility: visible;
+    pointer-events: auto;
+    background-color: rgba(80, 80, 80, 0.661);
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    transition: all 0.3s ease;
+    opacity: 1;
+    filter: blur(0);
+    transition: opacity, filter 0.3s ease;
+
+ }
+ .div-confirmacao-conteudo{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(231, 231, 231);
+    width: 450px;
+    height: 270px;
+    border-radius: 15px;
+    box-shadow: 0 0 7px rgba(97, 97, 97, 0.983);
+    margin: 200px auto 10px;
+    text-align: center;
+    box-shadow: 3px 3px 10px black;
+ }

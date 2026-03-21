@@ -1,24 +1,21 @@
 
-.divPrinc{
+.div-principal-home{
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   padding: 5px;
   width: 450px;
-}
-.divAddTarefas{
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  background-color: rgb(213, 230, 245);
-  padding: 10px;
-  border-radius: 5px;
-  align-content: flex-start;
-  width: 90%;
-}
-.spaco{
-  margin : 10px;
+  margin-left: auto;
+  margin-right: auto;
+  filter: blur(10px);
+  opacity: 0;
+  transition: filter 0.2s ease, opacity 0.2s ease;
+ }
+.div-principal-home.show{
+    filter: blur(0);
+    opacity: 1;
+    transition: filter 0.2s ease, opacity 0.2s ease;
 }
 input{
   padding: 10px;
@@ -34,4 +31,8 @@ input::placeholder{
   color: rgb(116, 163, 163);
   font-size: 17px;
 
+}
+textarea{
+  padding: 5px;
+  width: 100%;
 }

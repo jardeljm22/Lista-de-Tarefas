@@ -24,39 +24,16 @@ export const TarefaProvider  = ({children}) =>{
         setListaTarefa(listaAtualizada);
     }
 
-
-
-
-
-
-
-
-
     // alterando as informações de uma tarefa 
     const upTarefa = async (tarefa)=>{
         const tarefaAlterada = await updateTarefa(tarefa);
         setListaTarefa(tarefaAlterada);
     }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
     // pegando uma tarefa especifica que retorna essa tarefa
     const tarefaId = async (id) =>{
         const tarefa = await getTarefaId(id);
+        console.log(tarefa);
         return tarefa;
     }
     //marca a tarefa concluida
@@ -72,10 +49,6 @@ export const TarefaProvider  = ({children}) =>{
         const newLista = await updateTarefa(Concluida);
         setListaTarefa(newLista);
     }
-
-
-
-    
 
     useEffect(()=>{
 

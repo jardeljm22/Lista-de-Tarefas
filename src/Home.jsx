@@ -1,23 +1,32 @@
 
-import { useContext } from 'react';
+import { useContext,useEffect,useState } from 'react';
 import Tarefas from './components/Tarefas';
 import AddTarefas from "./components/AddTarefas";
-import './stiles/App.css'
+import './styles/Home.css'
 import { TarefaContext } from './context/contextTarefas';
 
 
-function App() {
+const Home = () => {
 
-const {listaTarefas,
+  const {listaTarefas,
   addTarefa,
   deletTarefa,
   upTarefa,
   tarefaConcluida,
   } = useContext(TarefaContext);
 
+  const [show, setShow] = useState(false);
+
+  useEffect(() => {
+    setTimeout(()=>{
+      setShow(true);
+    },0)
+    
+  }, []);
+
   return (
 
-    <div className='divPrinc'>
+    <div className={`div-principal-home ${show ? 'show' : ''}`}>
       <h1>Gerenciador de Tarefas</h1>
       <AddTarefas novaTarefa ={addTarefa}
       lista={listaTarefas}
@@ -34,4 +43,4 @@ const {listaTarefas,
   )
 }
 
-export default App
+export default Home;
