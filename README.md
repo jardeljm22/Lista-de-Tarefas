@@ -1,16 +1,79 @@
-# React + Vite
+📝 Lista de Tarefas
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Aplicação web simples para gerenciamento de tarefas, permitindo adicionar, visualizar ,atualiar, remover e organizar atividades do dia a dia de forma prática.
 
-Currently, two official plugins are available:
+🚀 Demonstração
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+🔗 Acesse o projeto online:
 
-## React Compiler
+https://organizador-de-tarefasls.vercel.app/
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+📸 Preview
 
-## Expanding the ESLint configuration
+![Preview](./public/print----.png)
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+
+
+🎯 Funcionalidades
+✅ Adicionar novas tarefas
+📋 Listar tarefas cadastradas
+❌ Remover tarefas
+💾 Persistência de dados no navegador (LocalStorage)
+⚡ Interface simples e responsiva
+🛠️ Tecnologias utilizadas
+React.js
+JavaScript (ES6+)
+HTML5
+CSS3
+LocalStorage
+📦 Como rodar o projeto
+# Clone o repositório
+git clone https://github.com/jardeljm22/Lista-de-Tarefas.git
+
+# Acesse a pasta
+cd Lista-de-Tarefas
+
+# Instale as dependências
+npm install
+
+# Rode o projeto
+npm run dev
+📁 Estrutura do projeto
+src/
+ ├── components/
+ ├── hooks/
+ ├── pages/
+ ├── services/
+ ├── context/
+ └── styles/
+🧠 Aprendizados
+
+Este projeto foi desenvolvido com foco em:
+
+Manipulação de estado no React
+Criação de hooks personalizados
+Organização de código em camadas
+Persistência de dados no navegador
+Boas práticas de componentização
+🔮 Melhorias futuras
+ Editar tarefas
+ Marcar como concluída
+ Filtro de tarefas (pendentes/concluídas)
+ Integração com API
+ Autenticação de usuário
+🤝 Contribuição
+
+Contribuições são bem-vindas!
+
+Fork o projeto
+Crie uma branch (git checkout -b feature/minha-feature)
+Commit (git commit -m 'minha feature')
+Push (git push origin minha-feature)
+Abra um Pull Request
+📄 Licença
+
+Este projeto está sob a licença MIT.
+
+👨‍💻 Autor
+
+Desenvolvido por Jardel Mendes
