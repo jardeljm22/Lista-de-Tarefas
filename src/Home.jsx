@@ -5,17 +5,16 @@ import AddTarefas from "./components/AddTarefas";
 import './styles/Home.css'
 import { TarefaContext } from './context/contextTarefas';
 
-
 const Home = () => {
 
-  const {listaTarefas,
-  addTarefa,
-  deletTarefa,
-  upTarefa,
-  tarefaConcluida,
+  const { listaTarefas,
+          addTarefa,
+          deletTarefa,
+          upTarefa,
+          tarefaConcluida,
   } = useContext(TarefaContext);
 
-  const [show, setShow] = useState(false);
+  const [show, setShow] = useState(false);// 
 
   useEffect(() => {
     setTimeout(()=>{
@@ -27,18 +26,19 @@ const Home = () => {
   return (
 
     <div className={`div-principal-home ${show ? 'show' : ''}`}>
-      <h1>Gerenciador de Tarefas</h1>
-      <AddTarefas novaTarefa ={addTarefa}
-      lista={listaTarefas}
-      funcaoTarefa={'Adicionar Tarefa'}
-      
-      />
-      <Tarefas lista={listaTarefas} 
-      apagaTarefa={deletTarefa} 
-      addNewTarefa={addTarefa}
-      alteraTarefa={upTarefa}
-      Concluida={tarefaConcluida}
-      />
+        <h1>Gerenciador de Tarefas</h1>
+        <AddTarefas 
+            novaTarefa ={addTarefa}
+            lista={listaTarefas}
+            funcaoTarefa={'Adicionar Tarefa'}
+        />
+        <Tarefas 
+            lista={listaTarefas} 
+            apagaTarefa={deletTarefa} 
+            addNewTarefa={addTarefa}
+            alteraTarefa={upTarefa}
+            concluida={tarefaConcluida}
+        />
       </div>  
   )
 }

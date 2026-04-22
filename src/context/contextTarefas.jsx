@@ -4,7 +4,7 @@ import { getTarefa,
     getTarefaId,
     createTarefa,
     deleteTarefa,
-    updateTarefa } from "../service/Service";
+    updateTarefa } from "../services/Service";
 
 // eslint-disable-next-line react-refresh/only-export-components
 export const TarefaContext = createContext();
@@ -38,21 +38,19 @@ export const TarefaProvider  = ({children}) =>{
     }
     //marca a tarefa concluida
     const tarefaConcluida = async (tarefa1) =>{
-        let Concluida = {};
+        let Concluida = {};// objeto que vai receber a tarefa com a propriedade isCompleted alterada para true ou false  
             if(tarefa1.isCompleted === false){
                  Concluida = {...tarefa1, isCompleted : true};
             }else{
                  Concluida = {...tarefa1, isCompleted : false}
             }
-    
-
         const newLista = await updateTarefa(Concluida);
         setListaTarefa(newLista);
     }
 
     useEffect(()=>{
 
-        const carregaListaTarefa = async () =>{
+        const carregaListaTarefa = async () =>{ // função para carregar a lista de tarefas do localStorage e atualizar o state da lista de tarefas
             const data = await getTarefa();
             setListaTarefa(data);
         }
@@ -72,7 +70,6 @@ export const TarefaProvider  = ({children}) =>{
             }} > 
             {children} 
         </TarefaContext.Provider>
-
     )
 
 }
